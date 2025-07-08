@@ -40,6 +40,9 @@ class Session :
     def quit(self) :
         self.driver.quit()
 
+    def refresh(self) :
+        self.driver.refresh()
+
 if __name__ == "__main__" :
     s = Session(True)
     s.connect()

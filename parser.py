@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from GoalieSignUp.data import mock_game
+from data import mock_game
 from data import mock
 from game import Game
 
