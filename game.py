@@ -7,10 +7,8 @@ class Game :
         self.calibre = calibre
 
     def __repr__(self) :
-        return f"'{self.title}, {self.date}, {self.time}, {self.duration}, {self.calibre}'"
-    
-    def set_arena(self, arena) :
-        self.arena = arena
+        return f"'{self.title}, {self.date}, {self.time}, {self.duration}, {self.calibre}, {self.location}'"
+
 
     def to_html(self) :
         string = "<div style='border: 1px solid white; padding-left: 10px; margin-bottom: 5px;'>"
