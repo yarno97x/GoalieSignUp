@@ -5,7 +5,6 @@ class Game :
         self.time = time
         self.duration = duration
         self.calibre = calibre
-        self.arena = None
 
     def __repr__(self) :
         return f"'{self.title}, {self.date}, {self.time}, {self.duration}, {self.calibre}'"
@@ -20,3 +19,10 @@ class Game :
         string += f"<p>{self.date}, {self.time}</p> "
         string += f"<p>{self.duration}, {self.calibre}</p></div>"
         return string
+
+    def setAll(self, location, pay, address, gametype, gender) :
+        self.location = location
+        self.pay = pay
+        self.address = address
+        self.gametype = gametype
+        self.gender = gender
