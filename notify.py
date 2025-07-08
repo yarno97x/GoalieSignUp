@@ -6,17 +6,18 @@ from parser import htmlparser
 email_address = 'yarnogrenier@gmail.com'
 email_password = 'bdda njwx izjq dzuk'  # Use your App Password
 
-def notify(games) :
+def notify(games, testing = True) :
     msg = EmailMessage()
     msg['Subject'] = "New Upcoming Games"
     msg['From'] = email_address
-    msg['To'] = 'mikacrevier@hotmail.com'
+    msg['To'] = 'mikacrevier@hotmail.com' if not testing else "yarno@hotmail.ca"
     content = 'Your games this week:\n' + "\n".join([str(game) for game in games])
     msg.set_content(content)  # fallback
     alt = f"""
         <html>
         <body style='background-color: skyblue'>
             {"".join([game.to_html() for game in games])}
+            <b>MAKE SURE TO CONFIRM ATTENDANCE</b>
         </body>
         </html>
         """
@@ -30,7 +31,8 @@ def notify(games) :
 
     print("Email sent!")
 
-games = htmlparser(mock)
-notify(games)
+if __name__ == "__main__" :
+    games = htmlparser(mock)
+    notify(games)
 
 
