@@ -337,3 +337,5 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageSta
 
 
 <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>"""
+
+games = ['Excellence sur glace, July 7, 8:30 PM, 60 Minutes, B Calibre', 'Hockey Challenge, July 10, 7:00 PM, 90 Minutes, A Calibre', 'Goalie Battle, July 15, 9:00 PM, 45 Minutes, C Calibre']

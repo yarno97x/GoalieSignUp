@@ -1,22 +1,31 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from parser import htmlparser
+from interactions import Session
+from notify import notify
 import time
 
-driver = webdriver.Chrome()  
-driver.get('https://goalieup.com/en/user')
+# 1 -> Selenium Log In
+s = Session()
+s.connect()
+page = s.get_html()
 
-def connect() :
-    driver.find_element(By.NAME, "name").send_keys("yarnogrenier@gmail.com")
-    driver.find_element(By.NAME, "pass").send_keys("9jaz84P6&abc")
-    driver.find_element(By.NAME, "op").click() 
-    time.sleep(100)
+# 2 -> Parse HTML and get games
+games = htmlparser(page)
+print(games)
 
-connect()
+# 3 -> Get Games \ if empty: refresh and #2
+# 4 -> Compare with preferences \ if no matches: refresh and #2
+# 5 -> For each match, click and get arena \ if no match: refresh and #2
+games = []
+signed_up = []
+for game in games :
+    s.click_on_game(game.link)
+    
+    # 6 ->  Sign up for match
+    if s.sign_up() :
+        signed_up.append(game)
 
-# Print page title
-print(driver.title)
+    s.go_back() # Implement this
 
-# Close the browser
-driver.quit()
-
+# 7 ->  Send notification
+if len(signed_up) > 0 :
+    notify(signed_up)
