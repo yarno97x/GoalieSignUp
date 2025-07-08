@@ -19,7 +19,8 @@ def htmlparser(string):
         date, _, time = fulldate.split(', ')
         duration = game.find('span', class_='length').text
         calibre = game.find('span', class_='calibre').text
-        liste.append(Game(title=title, date=date, time=time, duration=duration, calibre=calibre))
+        link = game['href']
+        liste.append(Game(title=title, date=date, time=time, duration=duration, calibre=calibre, link=link))
     return liste
 
 def parameters(Game, string):

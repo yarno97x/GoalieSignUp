@@ -1,13 +1,14 @@
 class Game :
-    def __init__(self, title, date, time, duration, calibre):
+    def __init__(self, title, date, time, duration, calibre, link):
         self.title = title
         self.date = date
         self.time = time
         self.duration = duration
         self.calibre = calibre
+        self.link = link
 
     def __repr__(self) :
-        return f"'{self.title}, {self.date}, {self.time}, {self.duration}, {self.calibre}, {self.location}'"
+        return f"'{self.title}, {self.date}, {self.time}, {self.duration}, {self.calibre}, {self.location}, {self.link}'"
 
 
     def to_html(self) :
