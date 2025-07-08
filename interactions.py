@@ -34,7 +34,8 @@ class Session :
         self.driver.find_element(By.XPATH, f"//a[@href='{link}']").click()
 
     def sign_up(self) :
-        pass
+        self.interested = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "interested")))
+        return self.get_html()
 
     def quit(self) :
         self.driver.quit()
