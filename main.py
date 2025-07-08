@@ -1,4 +1,4 @@
-from parser import htmlparser
+from parser import htmlparser, match
 from interactions import Session
 from notify import notify
 
@@ -20,7 +20,9 @@ for game in games :
     s.click_on_game(game.link)
     
     # 6 ->  Sign up for match
-    if s.sign_up() :
+    html = s.sign_up() 
+    if match(html) :
+        s.interested.click()
         signed_up.append(game)
 
     s.go_back() # Implement this
