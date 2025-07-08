@@ -216,7 +216,109 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageSta
 
     
   <div class="content">
-    <div class="games-list"><a href="https://goalieup.com/en/available/45941" class="game-row"><div class="date-tip"><div class="inner"><div class="day">7</div><div class="month">Jul</div></div></div><div class="info"><div class="title">Excellence sur glace</div><div class="info-inner"><div class="date-length"><div class="info-line"><div class="material-icons">event</div><span class="date">July 7, 2025, 8:30 PM</span></div><div class="info-line"><div class="material-icons">timer</div><span class="length">60 Minutes</span></div></div><div class="goalies-calibre"><div class="info-line"><span class="numberOfGoalies">2 Goalies</span><div class="material-icons">people</div></div><div class="info-line"><span class="calibre">B Calibre</span><div class="material-icons">star</div></div></div></div></div></a></div>  </div>
+    <div class="games-list">
+  <a href="https://goalieup.com/en/available/45941" class="game-row">
+    <div class="date-tip">
+      <div class="inner">
+        <div class="day">7</div>
+        <div class="month">Jul</div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="title">Excellence sur glace</div>
+      <div class="info-inner">
+        <div class="date-length">
+          <div class="info-line">
+            <div class="material-icons">event</div>
+            <span class="date">July 7, 2025, 8:30 PM</span>
+          </div>
+          <div class="info-line">
+            <div class="material-icons">timer</div>
+            <span class="length">60 Minutes</span>
+          </div>
+        </div>
+        <div class="goalies-calibre">
+          <div class="info-line">
+            <span class="numberOfGoalies">2 Goalies</span>
+            <div class="material-icons">people</div>
+          </div>
+          <div class="info-line">
+            <span class="calibre">B Calibre</span>
+            <div class="material-icons">star</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://goalieup.com/en/available/45942" class="game-row">
+    <div class="date-tip">
+      <div class="inner">
+        <div class="day">10</div>
+        <div class="month">Jul</div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="title">Hockey Challenge</div>
+      <div class="info-inner">
+        <div class="date-length">
+          <div class="info-line">
+            <div class="material-icons">event</div>
+            <span class="date">July 10, 2025, 7:00 PM</span>
+          </div>
+          <div class="info-line">
+            <div class="material-icons">timer</div>
+            <span class="length">90 Minutes</span>
+          </div>
+        </div>
+        <div class="goalies-calibre">
+          <div class="info-line">
+            <span class="numberOfGoalies">3 Goalies</span>
+            <div class="material-icons">people</div>
+          </div>
+          <div class="info-line">
+            <span class="calibre">A Calibre</span>
+            <div class="material-icons">star</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://goalieup.com/en/available/45943" class="game-row">
+    <div class="date-tip">
+      <div class="inner">
+        <div class="day">15</div>
+        <div class="month">Jul</div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="title">Goalie Battle</div>
+      <div class="info-inner">
+        <div class="date-length">
+          <div class="info-line">
+            <div class="material-icons">event</div>
+            <span class="date">July 15, 2025, 9:00 PM</span>
+          </div>
+          <div class="info-line">
+            <div class="material-icons">timer</div>
+            <span class="length">45 Minutes</span>
+          </div>
+        </div>
+        <div class="goalies-calibre">
+          <div class="info-line">
+            <span class="numberOfGoalies">1 Goalie</span>
+            <div class="material-icons">people</div>
+          </div>
+          <div class="info-line">
+            <span class="calibre">C Calibre</span>
+            <div class="material-icons">star</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
 </div>
 </div></div></div></div>        </section>
     <footer class="compact">
