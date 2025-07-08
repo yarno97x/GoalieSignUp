@@ -1,7 +1,6 @@
 from parser import htmlparser
 from interactions import Session
 from notify import notify
-import time
 
 # 1 -> Selenium Log In
 s = Session()

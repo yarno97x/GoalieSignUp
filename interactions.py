@@ -34,12 +34,7 @@ class Session :
         self.driver.find_element(By.XPATH, f"//a[@href='{link}']").click()
 
     def sign_up(self) :
-        submit = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.NAME, "ARENA"))) # CHANGE WHEN POSSIBLE
-        try :
-            submit.click()
-            return True
-        except :
-            return False
+        pass
 
     def quit(self) :
         self.driver.quit()
@@ -47,6 +42,6 @@ class Session :
 if __name__ == "__main__" :
     s = Session(True)
     s.connect()
-    # print(s.get_html())
+    print(s.get_html())
     print("Got html")
     s.quit()

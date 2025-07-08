@@ -10,7 +10,7 @@ def notify(games) :
     msg = EmailMessage()
     msg['Subject'] = "New Upcoming Games"
     msg['From'] = email_address
-    msg['To'] = 'yarno@hotmail.ca'
+    msg['To'] = 'mikacrevier@hotmail.com'
     content = 'Your games this week:\n' + "\n".join([str(game) for game in games])
     msg.set_content(content)  # fallback
     alt = f"""
