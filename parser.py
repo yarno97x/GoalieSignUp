@@ -5,6 +5,10 @@ from game import Game
 def htmlparser(string):
     soup = BeautifulSoup(string, 'html.parser')
     gameslist = soup.find('div', class_='games-list')
+
+    if not gameslist : # Returns empty list if it can't find gameslist
+        return []
+
     gamerow = gameslist.find_all('a', class_='game-row')
     liste = []
     for game in gamerow:
@@ -16,5 +20,5 @@ def htmlparser(string):
         liste.append(Game(title=title, date=date, time=time, duration=duration, calibre=calibre))
     return liste
 
-
-print(htmlparser(mock))
+if __name__ == "__main__" :
+    print(htmlparser(mock))
