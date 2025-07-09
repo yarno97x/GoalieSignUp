@@ -30,9 +30,8 @@ def check(game):
 def checkdate(string):
     pass
 
-def checkheure(string):
-    time = params["MaxTime"]
-
+def checkheure(time, maxtime):
+    return converttime(time) <= converttime(maxtime)
 
 def converttime(time) :
     heure = time[:-2]
