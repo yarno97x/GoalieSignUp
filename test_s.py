@@ -8,13 +8,13 @@ def game() :
     c.setAll("loc", "$50", "add", GameType.BALLGAME, Gender.EITHER)
     return c
 
-def test_check_calibre(game) :
+def test_check_calibre() :
     assert checkcalibre(Calibre.AA)
     assert checkcalibre(Calibre.A)
     assert checkcalibre(Calibre.BPLUS)
     assert not checkcalibre(Calibre.B)
 
-def test_check_date(game) :
+def test_check_date() :
     pass
 
 def test_convert_time() :
