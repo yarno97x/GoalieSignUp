@@ -23,7 +23,7 @@ def htmlparser(string):
         liste.append(Game(title=title, date=date, time=time, duration=duration, calibre=calibre, link=link))
     return liste
 
-def parameters(Game, string):
+def parameters(game, string):
     soup = BeautifulSoup(string, 'html.parser')
     location = soup.find('div', class_='title').text
     pay = soup.find('div', class_='fee').text
@@ -31,7 +31,7 @@ def parameters(Game, string):
     infolist = gamedetails.find_all('div', class_='info')
     gametype = infolist[0].text
     gender = infolist[2].text
-    Game.setAll(location, pay, location, gametype, gender)
+    game.setAll(location, pay, location, gametype, gender)
 
 
 if __name__ == "__main__" :
