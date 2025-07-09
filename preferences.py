@@ -17,9 +17,36 @@ class Calibre(Enum):
     A = "A"
     AA ="AA"
 
+params = {
+    "MaxTime" : "9:00PM",
+    "MaxDuration" : 45,
+    "Calibres" : [Calibre.BPLUS, Calibre.A, Calibre.AA]
+}
+
 # Date heure duration calibre
 def check(game):
     pass
+
+def checkdate(string):
+    pass
+
+def checkheure(time, maxtime):
+    return converttime(time) <= converttime(maxtime)
+
+def converttime(time) :
+    heure = time[:-2]
+    tab = heure.split(":")
+    minutes = int(tab[0]) * 60 + int(tab[1])
+
+    if "PM" in time :
+        return minutes + 12 * 60
+    return minutes
+
+def checkduration(string):
+    pass
+
+def checkcalibre(calibre):
+    return calibre != Calibre.B
 
 # Tout le reste
 def checkRest(game):
