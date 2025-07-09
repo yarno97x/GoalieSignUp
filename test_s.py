@@ -1,8 +1,7 @@
 import pytest
 from game import Game
 from preferences import Calibre, GameType, Gender
-from preferences import check, checkcalibre
-from params import params
+from preferences import check, checkcalibre, converttime, params
 
 @pytest.fixture
 def game() :
@@ -16,5 +15,13 @@ def test_check_calibre(game) :
     assert checkcalibre(Calibre.BPLUS)
     assert not checkcalibre(Calibre.B)
 
+def test_check_date(game) :
+    pass
 
+def test_convert_time() :
+    assert converttime("9:00PM") == (9+12)*60
+    assert converttime("6:00AM") == 6*60
+    assert converttime("11:00PM") == (11+12)*60
 
+def test_check_heure(game) :
+    pass
