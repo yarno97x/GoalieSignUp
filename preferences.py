@@ -21,6 +21,18 @@ class Calibre(Enum):
 def check(game):
     pass
 
+def checkdate(string):
+    pass
+
+def checkheure(string):
+    pass
+
+def checkduration(string):
+    pass
+
+def checkcalibre(calibre):
+    return calibre != Calibre.B
+
 # Tout le reste
 def checkRest(game):
     pass
